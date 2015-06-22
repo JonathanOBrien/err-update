@@ -1,0 +1,30 @@
+# This is a skeleton for Err plugins, use this to get started quickly.
+
+from errbot import BotPlugin, botcmd
+from errbot.builtins.webserver import webhook
+from errbot.utils import get_sender_username
+from datetime import datetime
+import urllib
+
+class updatePermissions(BotPlugin):
+	"""An Err plugin skeleton"""
+	#min_err_version = '1.6.0' # Optional, but recommended
+	#max_err_version = '2.0.0' # Optional, but recommended
+
+	@botcmd(split_args_with=None)
+	def update(self, mess, args):
+		"""Command to update your chatroom privlidges call it as !update"""
+        	url = 'http://pfralliance.com/updateMUCUser.php?user='+get_sender_username(mess)
+       		u = urllib.urlopen(url)
+	        # u is  file-like object
+       		data = u.read()
+		return data
+
+	@botcmd
+    	def updateall(self, mess, args):
+        	"""Runs the update function on all users.  For dev purposes, will be removed"""
+		url = 'http://pfralliance.com/mucPermissions.php'
+        	u = urllib.urlopen(url)
+        	# u is  file-like object
+        	data = u.read()
+        	return data

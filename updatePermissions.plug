@@ -1,0 +1,9 @@
+[Core]
+Name = updatePermissions
+Module = updatePermissions
+
+[Documentation]
+Description = An Err plugin that updates MUC permissions
+
+[Python]
+Version = 2+
