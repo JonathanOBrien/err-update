@@ -1,12 +1,5 @@
-err-skeleton
+err-update
 ============
 
-A skeleton for Err plugins. Use this to get started quickly.
+A err plugin that allows you to run a script on a remote (or local) webserver to set permissions for users on the jabber server.
 
-Fork & rename, or just download the files, then edit to suit
-your own tastes.
-
-Licence
--------
-
-Released into public domain. Do with it as you wish!

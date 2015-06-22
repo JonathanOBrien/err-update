@@ -3,7 +3,7 @@ Name = updatePermissions
 Module = updatePermissions
 
 [Documentation]
-Description = An Err plugin that updates MUC permissions
+Description = An Err plugin that updates MUC permissions in openfire.
 
 [Python]
 Version = 2+
